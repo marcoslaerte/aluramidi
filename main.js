@@ -4,7 +4,14 @@ function tocaSomPom() {
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
-listaDeTeclas[0].onclick = tocaSomPom;
+let contador = 0;
+
+while(contador < listaDeTeclas.length) {
+    listaDeTeclas[contador].onclick = tocaSomPom;
+
+    contador = contador + 1;
+    console.log(contador);
+}
 
 // // Função tocaSomPom sendo guardada dentro de onclick do botão com a classe tecla_pom para ser executada quando o usuário clicar.
 // document.querySelector('.tecla_pom').onclick = tocaSomPom; // Atribuicao da função ao onclick como se ele fosse um atributo
