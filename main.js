@@ -2,8 +2,12 @@ function tocaSomPom() {
     document.querySelector('#som_tecla_pom').play();
 }
 
-// Função tocaSomPom sendo guardada dentro de onclick do botão com a classe tecla_pom para ser executada quando o usuário clicar.
-document.querySelector('.tecla_pom').onclick = tocaSomPom; // Atribuicao da função ao onclick como se ele fosse um atributo
+const listaDeTeclas = document.querySelectorAll('.tecla');
+
+listaDeTeclas[0].onclick = tocaSomPom;
+
+// // Função tocaSomPom sendo guardada dentro de onclick do botão com a classe tecla_pom para ser executada quando o usuário clicar.
+// document.querySelector('.tecla_pom').onclick = tocaSomPom; // Atribuicao da função ao onclick como se ele fosse um atributo
 
 
 // Forma 2
