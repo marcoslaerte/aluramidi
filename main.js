@@ -15,6 +15,17 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     listaDeTeclas[contador].onclick = function () {
         tocaSom(idAudio);
     };
+
+    tecla.onkeydown = function(evento) {
+        if (evento.code === "Enter" || evento.code === "Space") {
+            tecla.classList.add("ativa");
+        }
+    };
+
+    tecla.onkeyup = function() {
+        tecla.classList.remove("ativa");
+    };
+
 }
 
 // // Função tocaSomPom sendo guardada dentro de onclick do botão com a classe tecla_pom para ser executada quando o usuário clicar.
